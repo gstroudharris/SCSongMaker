@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BuildItem" load_steps=3 format=3 uid="uid://cd48xl572exq1"]
+
+[ext_resource type="Script" uid="uid://b1dgo7trflm0a" path="res://Code/build_item.gd" id="1_h0ij1"]
+[ext_resource type="Texture2D" uid="uid://tvpgtcmugjcw" path="res://Assets/Protoss/WarpInStructure/Nexus/btn-unit-protoss-probe.dds" id="1_iftsg"]
+
+[resource]
+script = ExtResource("1_h0ij1")
+item_db_number = 1
+item_display_name = &"Probe"
+item_image = ExtResource("1_iftsg")
+item_build_time = 12
+hotkey_array = ["4", "Q"]
+metadata/_custom_type_script = "uid://b1dgo7trflm0a"

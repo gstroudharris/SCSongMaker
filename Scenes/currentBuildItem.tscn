@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://p8yojod6ixaa"]
 
-[ext_resource type="Texture2D" uid="uid://tvpgtcmugjcw" path="res://Assets/Protoss/WarpInStructure/Nexus/btn-unit-protoss-probe.dds" id="1_onudt"]
+[ext_resource type="Texture2D" uid="uid://cjdqltglttml0" path="res://Assets/Protoss/WarpInStructure/btn-building-protoss-assimilator.dds" id="1_onudt"]
 
 [node name="CurrentBuildItem" type="Node2D"]
 

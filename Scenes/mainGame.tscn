@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf1xfbhjgwxhn"]
+[gd_scene load_steps=7 format=3 uid="uid://cf1xfbhjgwxhn"]
 
 [ext_resource type="Script" uid="uid://cxehc1akwpn1s" path="res://Code/timer.gd" id="1_3fgs5"]
+[ext_resource type="Script" uid="uid://d2prcyudw8drb" path="res://Code/main_game.gd" id="1_yergv"]
+[ext_resource type="Script" uid="uid://ttf6lttfvjjm" path="res://Code/pending_build_item.gd" id="2_2k2ja"]
 [ext_resource type="Texture2D" uid="uid://ccaeeppcf4ke4" path="res://Assets/BasicScreenLayout.png" id="2_dx5hc"]
 [ext_resource type="PackedScene" uid="uid://p8yojod6ixaa" path="res://Scenes/currentBuildItem.tscn" id="3_ldq11"]
+[ext_resource type="Script" uid="uid://8uk1dgojjtbl" path="res://Code/current_input.gd" id="5_22woh"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_yergv")
 
 [node name="SampleUI" type="TextureRect" parent="."]
 visible = false
@@ -76,13 +80,45 @@ fit_content = true
 [node name="VBoxBuildOrder" type="VBoxContainer" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle"]
 layout_mode = 2
 
-[node name="PanelInteractArea" type="PanelContainer" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle"]
+[node name="PanelBuildItem" type="PanelContainer" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CurrentBuildItem" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelInteractArea" instance=ExtResource("3_ldq11")]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem"]
+layout_mode = 2
+
+[node name="BuildItemDisplay" type="Control" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CurrentBuildItem" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem/HBoxContainer/BuildItemDisplay" instance=ExtResource("3_ldq11")]
+unique_name_in_owner = true
 position = Vector2(114, 114)
+script = ExtResource("2_2k2ja")
+
+[node name="Spacer2" type="Control" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CurrentInput" type="RichTextLabel" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 41)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "CapInput"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_22woh")
+
+[node name="Spacer" type="Control" parent="UI/UIMarginCanvas/VBoxContainer/HBoxMiddle/PanelBuildItem/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="HBoxFooter" type="HBoxContainer" parent="UI/UIMarginCanvas/VBoxContainer"]
 layout_mode = 2
