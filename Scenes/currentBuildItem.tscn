@@ -7,18 +7,18 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_onudt")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="BuildingName" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(200, 0)
-offset_left = -95.0
-offset_top = 19.0
-offset_right = 105.0
-offset_bottom = 59.0
+offset_left = -100.0
+offset_top = 21.0
+offset_right = 100.0
+offset_bottom = 61.0
 text = "Buildingname"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BuildingTitle" type="RichTextLabel" parent="."]
+[node name="RichLabel" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(250, 0)
 offset_left = -111.0
 offset_top = -69.0
