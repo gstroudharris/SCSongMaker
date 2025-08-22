@@ -24,6 +24,7 @@ func input_matcher(input_key):
 			hotkey_array_number = hotkey_array_number + 1
 	else:
 		print("You win!")
+		
 
 func set_current_time(input_time):
 	current_time = input_time
