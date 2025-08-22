@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cf1xfbhjgwxhn"]
 
-[ext_resource type="Script" uid="uid://cxehc1akwpn1s" path="res://Code/timer.gd" id="1_3fgs5"]
+[ext_resource type="Script" uid="uid://cxehc1akwpn1s" path="res://Code/FooterItems/timer.gd" id="1_3fgs5"]
 [ext_resource type="Script" uid="uid://d2prcyudw8drb" path="res://Code/main_game.gd" id="1_yergv"]
-[ext_resource type="Script" uid="uid://ttf6lttfvjjm" path="res://Code/pending_build_item.gd" id="2_2k2ja"]
+[ext_resource type="Script" uid="uid://ttf6lttfvjjm" path="res://Code/MiddleItems/pending_build_item.gd" id="2_2k2ja"]
 [ext_resource type="Texture2D" uid="uid://ccaeeppcf4ke4" path="res://Assets/BasicScreenLayout.png" id="2_dx5hc"]
 [ext_resource type="PackedScene" uid="uid://p8yojod6ixaa" path="res://Scenes/currentBuildItem.tscn" id="3_ldq11"]
-[ext_resource type="Script" uid="uid://8uk1dgojjtbl" path="res://Code/current_input.gd" id="5_22woh"]
+[ext_resource type="Script" uid="uid://8uk1dgojjtbl" path="res://Code/MiddleItems/current_input.gd" id="5_22woh"]
 [ext_resource type="PackedScene" uid="uid://4uwd5nceg6h" path="res://Scenes/currentlyBuilding.tscn" id="7_arx4i"]
 
 [node name="Main" type="Node2D"]

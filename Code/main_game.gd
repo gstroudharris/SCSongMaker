@@ -7,11 +7,15 @@ var current_build_item = current_build_array[0]
 var current_item_attributes = current_build_item[0]
 
 
-func _enter_tree() -> void:
-	print(current_item_attributes.item_db_number," ",current_item_attributes.item_display_name," ",current_item_attributes.item_build_time)
-
 var hotkey_array_number: int = 0
 var current_time: float = 0.00
+
+#variables used in parts of the UI
+var item_in_building_queue: Resource = null
+
+
+func _enter_tree() -> void:
+	print(current_item_attributes.item_db_number," ",current_item_attributes.item_display_name," ",current_item_attributes.item_build_time)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -24,8 +28,11 @@ func input_matcher(input_key):
 			hotkey_array_number = hotkey_array_number + 1
 	else:
 		print("You win!")
+		start_building_item(current_item_attributes)
 		
 
 func set_current_time(input_time):
 	current_time = input_time
-	#print(current_time)
+	
+func start_building_item(input_building_resource):
+	item_in_building_queue = input_building_resource
