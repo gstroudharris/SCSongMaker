@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cf1xfbhjgwxhn"]
+[gd_scene load_steps=9 format=3 uid="uid://cf1xfbhjgwxhn"]
 
 [ext_resource type="Script" uid="uid://cxehc1akwpn1s" path="res://Code/FooterItems/timer.gd" id="1_3fgs5"]
 [ext_resource type="Script" uid="uid://d2prcyudw8drb" path="res://Code/main_game.gd" id="1_yergv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://p8yojod6ixaa" path="res://Scenes/currentBuildItem.tscn" id="3_ldq11"]
 [ext_resource type="Script" uid="uid://8uk1dgojjtbl" path="res://Code/MiddleItems/current_input.gd" id="5_22woh"]
 [ext_resource type="PackedScene" uid="uid://4uwd5nceg6h" path="res://Scenes/currentlyBuilding.tscn" id="7_arx4i"]
+[ext_resource type="Script" uid="uid://bwhjlahpiyhpx" path="res://Code/FooterItems/currently_building_item.gd" id="8_i3m4h"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_yergv")
@@ -204,6 +205,7 @@ layout_mode = 2
 
 [node name="CurrentlyBuilding" parent="UI/UIMarginCanvas/VBoxContainer/HBoxFooter/VBoxContainer2/HBoxContainer/PanelBuildingProgress" instance=ExtResource("7_arx4i")]
 position = Vector2(72, 73)
+script = ExtResource("8_i3m4h")
 
 [node name="Spacer2" type="Control" parent="UI/UIMarginCanvas/VBoxContainer/HBoxFooter/VBoxContainer2/HBoxContainer"]
 layout_mode = 2

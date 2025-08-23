@@ -4,15 +4,29 @@
 
 [node name="CurrentlyBuilding" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="QueueIcon" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 texture = ExtResource("1_p3y3w")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="QueueProgress" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 20)
 offset_left = 36.0
 offset_top = 12.0
 offset_right = 236.0
 offset_bottom = 39.0
+
+[node name="BuildingTitle" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+offset_left = 12.0
+offset_top = -63.0
+offset_right = 262.0
+offset_bottom = -23.0
+text = "Building Name"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 32.0
@@ -20,17 +34,6 @@ offset_top = -23.0
 offset_right = 105.0
 offset_bottom = 17.0
 text = "Building"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BuildingTitle" type="RichTextLabel" parent="."]
-custom_minimum_size = Vector2(250, 0)
-offset_left = 12.0
-offset_top = -63.0
-offset_right = 262.0
-offset_bottom = -23.0
-text = "Building Name"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
