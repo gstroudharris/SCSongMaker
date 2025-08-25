@@ -6,4 +6,3 @@
 [resource]
 script = ExtResource("1_mgvj4")
 current_build_array = Array[Resource]([ExtResource("1_i4v1r")])
-metadata/_custom_type_script = "uid://bjx0e1854bgbo"
