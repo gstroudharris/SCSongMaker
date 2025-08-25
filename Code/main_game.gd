@@ -24,10 +24,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 func input_matcher(input_key):
 	if hotkey_array_number < current_item_attributes.hotkey_array.size():
 		if input_key == current_item_attributes.hotkey_array[hotkey_array_number]:
-			print("You hit the right key!")
 			hotkey_array_number = hotkey_array_number + 1
 	else:
-		print("You win!")
 		start_building_item(current_item_attributes)
 		
 

@@ -25,11 +25,11 @@ func _process(delta: float) -> void:
 		
 	else:
 		#clear queue
-		item_queued = false
 		get_tree().root.get_node("Main").start_building_item(null)
 		replace_texture(null)
-		replace_and_track_progress(0.0)
-		print(get_tree().root.get_node("Main").item_in_building_queue, )
+		queue_bar.value = 0
+		text_display.clear()
+		item_queued = false
 			
 func replace_texture(input_texture):
 	icon_display.texture = input_texture
